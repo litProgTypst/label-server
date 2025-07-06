@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# This bash script uses the current working directory to create a simple
+# script to run the labelServer website command anywhere in a user's
+# workspace.
+
+installScript() {
+  scriptName=$1
+  cmdScript=$(pwd)/.venv/bin/$scriptName
+
+  cat << CMD_SCRIPT > $HOME/.local/bin/$scriptName
+#!/bin/sh
+
+# This shell script was created by the labelServer tool
+#       './scripts/installEditableLabelServerCommand'
+# script.
+
+exec $cmdScript \$@
+CMD_SCRIPT
+
+  chmod a+x $HOME/.local/bin/$scriptName
+}
+
+##########################################################################
+
+installScript labelServer
+installScript labelCreateDb
+
+
+echo ""
+echo "The editable labelServer command has been created"
+echo ""

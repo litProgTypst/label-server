@@ -1,0 +1,23 @@
+[project]
+name = "labelServer"
+version = "0.0.1"
+description = "A simple tool to manage labels and cross-references in collecitons of Typst documents."
+authors = [
+    {name = "Stephen Gaito", email = "stephen@perceptisys.co.uk"},
+]
+dependencies = [
+    "pyyaml>=6.0",
+    "flask>=3.0.3",
+    "waitress>=3.0.0"
+]
+requires-python = ">=3.10"
+license = {text = "Apache2.0"}
+
+[project.scripts]
+labelServer   = "labelServer.webserver:cli"
+labelCreateDb = "labelServer.database:createDb"
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+

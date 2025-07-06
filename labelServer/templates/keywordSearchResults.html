@@ -1,0 +1,24 @@
+{% extends "dbIndex.html" %}
+{% block subTitle%}Keyword search results - {% endblock %}
+{% block header %}
+<h2>{{ name }} keyword search results:</h2>
+{% endblock %}
+{% block body %}
+<table>
+  <th>
+    <td>Label</td>
+    <td>Desc</td>
+  </th>
+{%   for aRow in results %}
+  <tr>
+    <td></td>
+    <td>
+      <a href="/{{dbConf['baseUrl']}}/edit/{{aRow['label']}}">
+      {{aRow['label']}}
+      </a>
+    </td>
+    <td>{{aRow['desc']}}</td>
+  </tr>
+{%   endfor %}
+</table>
+{% endblock %}

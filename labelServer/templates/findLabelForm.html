@@ -1,0 +1,12 @@
+{% extends "dbIndex.html" %}
+{% block subTitle%}Find label - {% endblock %}
+{% block header %}
+<h2>{{name}} find label:</h2>
+{% endblock %}
+{% block body %}
+<form action="" method="post">
+<label>Label:</label><br>
+<input type="text" name="label" value="{{findValues['label']}}" style="width:90%"/><br>
+<input type="submit" value="Find label"/>
+</form>
+{% endblock %}

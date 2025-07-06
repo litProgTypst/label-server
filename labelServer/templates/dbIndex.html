@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block footer %}
+<ul>
+  <li><a href="/{{dbConf['baseUrl']}}/new">New label</a></li>
+  <li><a href="/{{dbConf['baseUrl']}}/find">Find a label</a></li>
+  <li><a href="/{{dbConf['baseUrl']}}/">Keyword search</a></li>
+</ul>
+{% endblock %}

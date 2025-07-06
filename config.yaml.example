@@ -1,0 +1,21 @@
+baseDir: /tmp
+
+tags:
+  databases:
+    FingerPieces:
+      localPath: $baseDir/FingerPieces.sqlite
+      baseUrl: 'fp'
+      logLevel: 10
+    DiSimplex:
+      localPath: $baseDir/DiSimplex.sqlite
+      baseUrl: 'ds'
+      logLevel: 10
+  webserver:
+    title: diSimplex LPiL Gerby label databases
+    # for some reason Waitress needs this when inside a Podman container!
+    #host: '0.0.0.0'
+    host: '127.0.0.1'
+    port: 8890
+    appLogLevel: 10
+    waitressLogLevel: 10
+    flaskLogLevel: 10

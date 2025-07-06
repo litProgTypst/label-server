@@ -1,0 +1,12 @@
+{% extends "dbIndex.html" %}
+{% block subTitle%}Search keywords - {% endblock %}
+{% block header %}
+<h2>{{ name }} keyword search:</h2>
+{% endblock %}
+{% block body %}
+<form action="" method="post">
+<label>Keywords:</label><br>
+<input type="text" name="keywords" value="{{searchValues['keywords']}}" style="width:90%"/><br>
+<input type="submit" value="Keyword search"/>
+</form>
+{% endblock %}

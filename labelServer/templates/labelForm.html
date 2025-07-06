@@ -1,0 +1,16 @@
+{% extends "dbIndex.html" %}
+{% block subTitle%}Label - {% endblock %}
+{% block header %}
+<h2>{{ name }} {{labelValues['action']}} label:</h2>
+{% endblock %}
+{% block body %}
+<form action="/{{dbConf['baseUrl']}}/new" method="post">
+<label>Label:</label><br>
+<input type="text" name="label" value="{{labelValues['label']}}" style="width:90%"/><br>
+<label>In use:</label>
+<input type="checkbox" name="inuse" {% if labelValues['inuse'] != 0 %}checked{% endif %}/><br>
+<label>Description:</label><br>
+<textarea name="desc" style="width:90%">{{labelValues['desc']}}</textarea><br>
+<input type="submit" value="Save"/>
+</form>
+{% endblock %}
