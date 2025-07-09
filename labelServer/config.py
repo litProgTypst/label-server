@@ -13,19 +13,6 @@ import copy
 import os
 import yaml
 
-# List the known Gerby Constants so that IF they are in the TOML file
-# they will be used to over-ride the computed values
-gerbyConsts = [
-  "COMMENTS",
-  "DATABASE",
-  "UNIT",
-  "DEPTH",
-  "PATH",
-  "PAUX",
-  "TAGS",
-  "PDF"
-]
-
 def mergeYamlData(yamlData, newYamlData, thePath, baseDir) :
   """ This is a generic Python merge. It is a *deep* merge and handles
   recursive dictionary structures """

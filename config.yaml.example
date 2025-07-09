@@ -2,18 +2,18 @@ baseDir: /tmp
 
 tags:
   databases:
-    FingerPieces:
-      desc: Labels used across the collection of Finger Pieces
-      localPath: $baseDir/FingerPieces.sqlite
-      baseUrl: 'fp'
+    Documents:
+      desc: Document identifier labels used to identify each document
+      localPath: $baseDir/Documents.sqlite
+      baseUrl: 'docs'
       logLevel: 10
-    DiSimplex:
-      desc: Labels used across the collection of diSimplex documents
-      localPath: $baseDir/DiSimplex.sqlite
-      baseUrl: 'ds'
+    CrossReferences:
+      desc: Cross reference labels used across the collection of Typst documents
+      localPath: $baseDir/CrossReferences.sqlite
+      baseUrl: 'cr'
       logLevel: 10
   webserver:
-    title: diSimplex LPiT label databases
+    title: Typst document label databases
     # for some reason Waitress needs this when inside a Podman container!
     #host: '0.0.0.0'
     host: '127.0.0.1'

@@ -49,7 +49,7 @@ def cli() :
       'msg' : 'All tag databases MUST specify the localPath'
     },
     'tags.webserver.title' : {
-      'default' : 'LPiL Gerby Tags Labels mapping'
+      'default' : 'LPiT Labels'
     },
     'tags.webserver.host' : {
       'default' : '127.0.0.1'
@@ -82,7 +82,7 @@ def cli() :
   app = DispatcherMiddleware(baseApp, dbApps)
 
   # Adjust the Waitress logging levels....
-  waitressLogLevel = config['tags.webserver.waitressLogLeve']
+  waitressLogLevel = config['tags.webserver.waitressLogLevel']
   if waitressLogLevel :
     wLogger = logging.getLogger('waitress')
     wLogger.setLevel(waitressLogLevel)
