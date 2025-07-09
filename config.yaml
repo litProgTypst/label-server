@@ -3,10 +3,12 @@ baseDir: tmp
 tags:
   databases:
     FingerPieces:
+      desc: Labels used across the collection of Finger Pieces
       localPath: $baseDir/FingerPieces.sqlite
       baseUrl: 'fp'
       logLevel: 10
     DiSimplex:
+      desc: Labels used across the collection of diSimplex documents
       localPath: $baseDir/DiSimplex.sqlite
       baseUrl: 'ds'
       logLevel: 10
